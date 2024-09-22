@@ -28,6 +28,9 @@ void SystemClock_Config(void) {
     RCC->PLLCFGR &= ~(RCC_PLLCFGR_PLLN_Msk);
     RCC->PLLCFGR &= ~(RCC_PLLCFGR_PLLP_Msk);
 
+    /* Determining the PLL freq:
+     * (HSI * PLLN) / (PLLM * PLLP) = PLL_finalFreq
+     */
     RCC->PLLCFGR |= (16 << RCC_PLLCFGR_PLLM_Pos); // divide by 16
     RCC->PLLCFGR |= (320 << RCC_PLLCFGR_PLLN_Pos); // multiply by 320
     RCC->PLLCFGR |= (0 << RCC_PLLCFGR_PLLP_Pos); // divide by 2
