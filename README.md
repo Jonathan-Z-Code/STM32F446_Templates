@@ -1,2 +1,2 @@
-# STM32F4_Templates
-Various templates for accelerating a new embedded STM32F4XX project
+# STM32F446_Templates
+Various templates for accelerating a new embedded STM32F446 project
