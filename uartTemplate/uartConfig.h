@@ -42,7 +42,7 @@ void UART1_Config(void){
 	uint32_t baud_rate = 153000; // 153k baud
 
 	/*  Please consult pages 808-809 on RM0390
-   *  Reference manual in order to configure Baud Rate Register (BRR)
+   	 *  Reference manual in order to configure Baud Rate Register (BRR)
 	 */
 
 	USART1->BRR = 262; // value depends on desired Baud Rate, SYSCLK and APB2 frequency
